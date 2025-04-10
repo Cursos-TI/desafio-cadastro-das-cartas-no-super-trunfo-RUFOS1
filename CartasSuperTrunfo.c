@@ -112,15 +112,30 @@ int main() {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //Comparação das cartas
-    printf("\nComparação de Cartas:\n"); 
-    printf("\n(se o resultado for 1, carta 1 vence, se o resultado for 0 carta 2 vence)\n");     
-    printf("População: %d\n", numPopulacao1 > numPopulacao2);
-    printf("Área: %d\n", areaKM1 > areaKM2);
-    printf("PIB: %d\n", PIB1 > PIB2);
-    printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1 > pontosTuristicos2);
-    printf("Densidade Populacional: %d\n", densidadePop1 > densidadePop2);
-    printf("PIB per capita: %d \n", PIBperCapita1 > PIBperCapita2);
-    printf("Super Poder: %d \n", super_poder1 > super_poder2);
+    //antiga comparação de cartas sem usar Estrutura de if e else
+    // printf("\nComparação de Cartas:\n"); 
+    // printf("\n(se o resultado for 1, carta 1 vence, se o resultado for 0 carta 2 vence)\n");     
+    // printf("População: %d\n", numPopulacao1 > numPopulacao2);
+    // printf("Área: %d\n", areaKM1 > areaKM2);
+    // printf("PIB: %d\n", PIB1 > PIB2);
+    // printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1 > pontosTuristicos2);
+    // printf("Densidade Populacional: %d\n", densidadePop1 > densidadePop2);
+    // printf("PIB per capita: %d \n", PIBperCapita1 > PIBperCapita2);
+    // printf("Super Poder: %d \n", super_poder1 > super_poder2);
+
+    //Estrutura de comparação direta, de atributo para ver qual carta ganhou, escolhido o atributo população
+    printf("-------------------------------------------");
+    printf("\nComparação de cartas (Atributo: População):\n");
+    if (numPopulacao1 > numPopulacao2) {
+        printf("Carta 1 - %s: %d habitantes\n", nomeCidade1, numPopulacao1);
+        printf("Carta 2 - %s: %d habitantes\n", nomeCidade2, numPopulacao2);
+        printf("Resultado: Carta 1 - %s Venceu!\n", nomeCidade1);
+    }else{
+        printf("Carta 1 - %s: %d habitantes\n", nomeCidade1, numPopulacao1);
+        printf("Carta 2 - %s: %d habitantes\n", nomeCidade2, numPopulacao2);
+        printf("Resultado: Carta 2 - %s Venceu!\n", nomeCidade2);
+    }
+    
 
     return 0;
 }
